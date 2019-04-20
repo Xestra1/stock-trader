@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Xestra</title>
+
+</head>
+
+<body>
+    <section class="header">
+        <h1>Stock Trader</h1>
+        <h2>
+            Total Balance: $<a id="balance"></a>
+        </h2>
+        <a onclick="simulation()" class="button">Simulate</a>
+        <p>Day: <a id="day"></a></p>
+    </section>
+
+    <section class="stocks">
+        <div class="table">
+            <div class="card">
+                <h3>Amd</h3>
+                <p class="stockPrice">$<a id="stockPriceOne"></a>.00</p>
+                <i class="fas fa-arrow-alt-circle-up"></i>
+                <div class="buy-sell">
+                    <i onclick="buy(1)" class="fas fa-plus-circle"></i>
+                    <i onclick="sell(1)" class="fas fa-minus-circle"></i>
+                </div>
+                <p class="stockQuantity">Quantity owned: <a id="quantityOne"></a></p>
+            </div>
+
+            <div class="card">
+                <h3>PayPal</h3>
+                <p class="stockPrice">$<a id="stockPriceTwo"></a>.00</p>
+                <i class="fas fa-arrow-alt-circle-up"></i>
+                <div class="buy-sell">
+                    <i onclick="buy(2)" class="fas fa-plus-circle"></i>
+                    <i onclick="sell(2)" class="fas fa-minus-circle"></i>
+                </div>
+                <p class="stockQuantity">Quantity owned: <a id="quantityTwo"></a></p>
+            </div>
+
+            <div class="card">
+                <h3>Apple</h3>
+                <p class="stockPrice">$<a id="stockPriceThree"></a>.00</p>
+                <i class="fas fa-arrow-alt-circle-up"></i>
+                <div class="buy-sell">
+                    <i onclick="buy(3)" class="fas fa-plus-circle"></i>
+                    <i onclick="sell(3)" class="fas fa-minus-circle"></i>
+                </div>
+                <p class="stockQuantity">Quantity owned: <a id="quantityThree"></a></p>
+            </div>
+
+            <div class="card">
+                <h3>Google</h3>
+                <p class="stockPrice">$<a id="stockPriceFour"></a>.00</p>
+                <i class="fas fa-arrow-alt-circle-up"></i>
+                <div class="buy-sell">
+                    <i onclick="buy(4)" class="fas fa-plus-circle"></i>
+                    <i onclick="sell(4)" class="fas fa-minus-circle"></i>
+                </div>
+                <p class="stockQuantity">Quantity owned: <a id="quantityFour"></a></p>
+            </div>
+
+            <div class="card">
+                <h3>Amazon</h3>
+                <p class="stockPrice">$<a id="stockPriceFive"></a>.00</p>
+                <i class="fas fa-arrow-alt-circle-up"></i>
+                <div class="buy-sell">
+                    <i onclick="buy(5)" class="fas fa-plus-circle"></i>
+                    <i onclick="sell(5)" class="fas fa-minus-circle"></i>
+                </div>
+                <p class="stockQuantity">Quantity owned: <a id="quantityFive"></a></p>
+            </div>
+
+            <div class="card">
+                <h3>MicroSoft</h3>
+                <p class="stockPrice">$<a id="stockPriceSix"></a>.00</p>
+                <i class="fas fa-arrow-alt-circle-up"></i>
+                <div class="buy-sell">
+                    <i onclick="buy(6)" class="fas fa-plus-circle"></i>
+                    <i onclick="sell(6)" class="fas fa-minus-circle"></i>
+                </div>
+                <p class="stockQuantity">Quantity owned: <a id="quantitySix"></a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <a href="https://discord.gg/VhDbr5H">Created By <span class="blue">Xestra</span></a>
+        <a href="./html/help.html">Need help?</a>
+        <a href="https://discord.gg/VhDbr5H">Found a <span class="red">bug</span>?</a>
+    </section>
+
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
