@@ -1,5 +1,6 @@
 var bal = 1000;
 var days = 0;
+var complete = false;
 
 function Stocks(name, id, value, quantityOwned) {
 	this.name = name;
@@ -35,14 +36,29 @@ document.getElementById('quantitySix').innerHTML = stockSix.quantityOwned;
 
 
 function simulation() {
-	days++;
-	randomizer1(stockOne.id, stockOne.value);
-	randomizer2(stockTwo.id, stockTwo.value);
-	randomizer3(stockThree.id, stockThree.value);
-	randomizer4(stockFour.id, stockFour.value);
-	randomizer5(stockFive.id, stockFive.value);
-	randomizer6(stockSix.id, stockSix.value);
-	document.getElementById('day').innerHTML = days;
+	// days++;
+	// randomizer1(stockOne.id, stockOne.value);
+	// randomizer2(stockTwo.id, stockTwo.value);
+	// randomizer3(stockThree.id, stockThree.value);
+	// randomizer4(stockFour.id, stockFour.value);
+	// randomizer5(stockFive.id, stockFive.value);
+	// randomizer6(stockSix.id, stockSix.value);
+	// document.getElementById('day').innerHTML = days;
+	if (bal > 0 && bal < 10000) {
+		days++;
+		randomizer1(stockOne.id, stockOne.value);
+		randomizer2(stockTwo.id, stockTwo.value);
+		randomizer3(stockThree.id, stockThree.value);
+		randomizer4(stockFour.id, stockFour.value);
+		randomizer5(stockFive.id, stockFive.value);
+		randomizer6(stockSix.id, stockSix.value);
+		document.getElementById('day').innerHTML = days;
+	} else if (bal > 0 && bal >= 10000 && complete === false) {
+		alert('You won!\r\nBalance: ' + bal + '\r\nDays to complete: ' + days + '\r\nHit OK to continue');
+		complete = true;
+	} else {
+		alert('You Suck! HAHA loser!\r\nBalance: ' + bal + '\r\nDays to fail: ' + days + '\r\nRefresh to start a new game');
+	}
 }
 
 function randomizer1(id, value) {
