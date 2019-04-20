@@ -91,13 +91,13 @@ function randomizer1(id, value) {
 function randomizer2(id, value) {
 	var random = Math.floor(Math.random() * 3);
 	if (random === 0) {
-		value++;
+		value += 2;
 		stockTwo.value = value;
 		document.getElementById('stockPriceTwo').innerHTML = value;
 		document.getElementById("circleUpTwo").style.transform = "rotate(0deg)";
 		document.getElementById("circleUpTwo").style.color = "#03A9F4";
 	} else if (random === 1 && value != 0) {
-		value--;
+		value -= 2;
 		stockTwo.value = value;
 		document.getElementById('stockPriceTwo').innerHTML = value;
 		document.getElementById("circleUpTwo").style.transform = "rotate(180deg)";
@@ -115,13 +115,13 @@ function randomizer2(id, value) {
 function randomizer3(id, value) {
 	var random = Math.floor(Math.random() * 3);
 	if (random === 0) {
-		value++;
+		value += 4;
 		stockThree.value = value;
 		document.getElementById('stockPriceThree').innerHTML = value;
 		document.getElementById("circleUpThree").style.transform = "rotate(0deg)";
 		document.getElementById("circleUpThree").style.color = "#03A9F4";
 	} else if (random === 1 && value != 0) {
-		value--;
+		value -= 4;
 		stockThree.value = value;
 		document.getElementById('stockPriceThree').innerHTML = value;
 		document.getElementById("circleUpThree").style.transform = "rotate(180deg)";
@@ -139,13 +139,13 @@ function randomizer3(id, value) {
 function randomizer4(id, value) {
 	var random = Math.floor(Math.random() * 3);
 	if (random === 0) {
-		value++;
+		value += 10;
 		stockFour.value = value;
 		document.getElementById('stockPriceFour').innerHTML = value;
 		document.getElementById("circleUpFour").style.transform = "rotate(0deg)";
 		document.getElementById("circleUpFour").style.color = "#03A9F4";
 	} else if (random === 1 && value != 0) {
-		value--;
+		value -= 10;
 		stockFour.value = value;
 		document.getElementById('stockPriceFour').innerHTML = value;
 		document.getElementById("circleUpFour").style.transform = "rotate(180deg)";
@@ -163,13 +163,13 @@ function randomizer4(id, value) {
 function randomizer5(id, value) {
 	var random = Math.floor(Math.random() * 3);
 	if (random === 0) {
-		value++;
+		value += 15;
 		stockFive.value = value;
 		document.getElementById('stockPriceFive').innerHTML = value;
 		document.getElementById("circleUpFive").style.transform = "rotate(0deg)";
 		document.getElementById("circleUpFive").style.color = "#03A9F4";
 	} else if (random === 1 && value != 0) {
-		value--;
+		value -= 15
 		stockFive.value = value;
 		document.getElementById('stockPriceFive').innerHTML = value;
 		document.getElementById("circleUpFive").style.transform = "rotate(180deg)";
@@ -187,13 +187,13 @@ function randomizer5(id, value) {
 function randomizer6(id, value) {
 	var random = Math.floor(Math.random() * 3);
 	if (random === 0) {
-		value++;
+		value += 2;
 		stockSix.value = value;
 		document.getElementById('stockPriceSix').innerHTML = value;
 		document.getElementById("circleUpSix").style.transform = "rotate(0deg)";
 		document.getElementById("circleUpSix").style.color = "#03A9F4";
 	} else if (random === 1 && value != 0) {
-		value--;
+		value -= 2;
 		stockSix.value = value;
 		document.getElementById('stockPriceSix').innerHTML = value;
 		document.getElementById("circleUpSix").style.transform = "rotate(180deg)";
@@ -209,32 +209,32 @@ function randomizer6(id, value) {
 }
 
 function buy(numBuy) {
-	if (numBuy === 1 && bal > 0 && stockOne.value < bal) {
+	if (numBuy === 1 && bal > 0.0 && stockOne.value < bal) {
 		stockOne.quantityOwned++;
 		bal -= stockOne.value;
 		document.getElementById('quantityOne').innerHTML = stockOne.quantityOwned;
 		document.getElementById('balance').innerHTML = bal;
-	} else if (numBuy === 2 && bal > 0 && stockOne.value < bal) {
+	} else if (numBuy === 2 && bal > 0.0 && stockOne.value < bal) {
 		stockTwo.quantityOwned++;
 		bal -= stockTwo.value;
 		document.getElementById('quantityTwo').innerHTML = stockTwo.quantityOwned;
 		document.getElementById('balance').innerHTML = bal;
-	} else if (numBuy === 3 && bal > 0 && stockOne.value < bal) {
+	} else if (numBuy === 3 && bal > 0.0 && stockOne.value < bal) {
 		stockThree.quantityOwned++;
 		bal -= stockThree.value;
 		document.getElementById('quantityThree').innerHTML = stockThree.quantityOwned;
 		document.getElementById('balance').innerHTML = bal;
-	} else if (numBuy === 4 && bal > 0 && stockOne.value < bal) {
+	} else if (numBuy === 4 && bal > 0.0 && stockOne.value < bal) {
 		stockFour.quantityOwned++;
 		bal -= stockFour.value;
 		document.getElementById('quantityFour').innerHTML = stockFour.quantityOwned;
 		document.getElementById('balance').innerHTML = bal;
-	} else if (numBuy === 5 && bal > 0 && stockOne.value < bal) {
+	} else if (numBuy === 5 && bal > 0.0 && stockOne.value < bal) {
 		stockFive.quantityOwned++;
 		bal -= stockFive.value;
 		document.getElementById('quantityFive').innerHTML = stockFive.quantityOwned;
 		document.getElementById('balance').innerHTML = bal;
-	} else if (numBuy === 6 && bal > 0 && stockOne.value < bal) {
+	} else if (numBuy === 6 && bal > 0.0 && stockOne.value < bal) {
 		stockSix.quantityOwned++;
 		bal -= stockSix.value;
 		document.getElementById('quantitySix').innerHTML = stockSix.quantityOwned;
