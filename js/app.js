@@ -51,13 +51,22 @@ function randomizer1(id, value) {
 		value++;
 		stockOne.value = value;
 		document.getElementById('stockPriceOne').innerHTML = value;
+		//css
+		document.getElementById("circleUpOne").style.transform = "rotate(0deg)";
+		document.getElementById("circleUpOne").style.color = "#03A9F4";
 	} else if (random === 1 && value != 0) {
 		value--;
 		stockOne.value = value;
 		document.getElementById('stockPriceOne').innerHTML = value;
+		//css
+		document.getElementById("circleUpOne").style.transform = "rotate(180deg)";
+		document.getElementById("circleUpOne").style.color = "#FF5252";
 	} else if (random === 2) {
 		console.log('Stock Price neutral ' + id);
 		document.getElementById('stockPriceOne').innerHTML = value;
+		//css
+		document.getElementById("circleUpOne").style.transform = "rotate(90deg)";
+		document.getElementById("circleUpOne").style.color = "#757575";
 	} else {
 		console.log('randomizer not working');
 	}
@@ -69,13 +78,19 @@ function randomizer2(id, value) {
 		value++;
 		stockTwo.value = value;
 		document.getElementById('stockPriceTwo').innerHTML = value;
+		document.getElementById("circleUpTwo").style.transform = "rotate(0deg)";
+		document.getElementById("circleUpTwo").style.color = "#03A9F4";
 	} else if (random === 1 && value != 0) {
 		value--;
 		stockTwo.value = value;
 		document.getElementById('stockPriceTwo').innerHTML = value;
+		document.getElementById("circleUpTwo").style.transform = "rotate(180deg)";
+		document.getElementById("circleUpTwo").style.color = "#FF5252";
 	} else if (random === 2) {
 		console.log('Stock Price neutral ' + id);
 		document.getElementById('stockPriceTwo').innerHTML = value;
+		document.getElementById("circleUpTwo").style.transform = "rotate(90deg)";
+		document.getElementById("circleUpTwo").style.color = "#757575";
 	} else {
 		console.log('randomizer not working');
 	}
@@ -87,13 +102,19 @@ function randomizer3(id, value) {
 		value++;
 		stockThree.value = value;
 		document.getElementById('stockPriceThree').innerHTML = value;
+		document.getElementById("circleUpThree").style.transform = "rotate(0deg)";
+		document.getElementById("circleUpThree").style.color = "#03A9F4";
 	} else if (random === 1 && value != 0) {
 		value--;
 		stockThree.value = value;
 		document.getElementById('stockPriceThree').innerHTML = value;
+		document.getElementById("circleUpThree").style.transform = "rotate(180deg)";
+		document.getElementById("circleUpThree").style.color = "#FF5252";
 	} else if (random === 2) {
 		console.log('Stock Price neutral ' + id);
 		document.getElementById('stockPriceThree').innerHTML = value;
+		document.getElementById("circleUpThree").style.transform = "rotate(90deg)";
+		document.getElementById("circleUpThree").style.color = "#757575";
 	} else {
 		console.log('randomizer not working');
 	}
@@ -105,13 +126,19 @@ function randomizer4(id, value) {
 		value++;
 		stockFour.value = value;
 		document.getElementById('stockPriceFour').innerHTML = value;
+		document.getElementById("circleUpFour").style.transform = "rotate(0deg)";
+		document.getElementById("circleUpFour").style.color = "#03A9F4";
 	} else if (random === 1 && value != 0) {
 		value--;
 		stockFour.value = value;
 		document.getElementById('stockPriceFour').innerHTML = value;
+		document.getElementById("circleUpFour").style.transform = "rotate(180deg)";
+		document.getElementById("circleUpFour").style.color = "#FF5252";
 	} else if (random === 2) {
 		console.log('Stock Price neutral ' + id);
 		document.getElementById('stockPriceFour').innerHTML = value;
+		document.getElementById("circleUpFour").style.transform = "rotate(90deg)";
+		document.getElementById("circleUpFour").style.color = "#757575";
 	} else {
 		console.log('randomizer not working');
 	}
@@ -123,13 +150,19 @@ function randomizer5(id, value) {
 		value++;
 		stockFive.value = value;
 		document.getElementById('stockPriceFive').innerHTML = value;
+		document.getElementById("circleUpFive").style.transform = "rotate(0deg)";
+		document.getElementById("circleUpFive").style.color = "#03A9F4";
 	} else if (random === 1 && value != 0) {
 		value--;
 		stockFive.value = value;
 		document.getElementById('stockPriceFive').innerHTML = value;
+		document.getElementById("circleUpFive").style.transform = "rotate(180deg)";
+		document.getElementById("circleUpFive").style.color = "#FF5252";
 	} else if (random === 2) {
 		console.log('Stock Price neutral ' + id);
 		document.getElementById('stockPriceFive').innerHTML = value;
+		document.getElementById("circleUpFive").style.transform = "rotate(90deg)";
+		document.getElementById("circleUpFive").style.color = "#757575";
 	} else {
 		console.log('randomizer not working');
 	}
@@ -141,13 +174,19 @@ function randomizer6(id, value) {
 		value++;
 		stockSix.value = value;
 		document.getElementById('stockPriceSix').innerHTML = value;
+		document.getElementById("circleUpSix").style.transform = "rotate(0deg)";
+		document.getElementById("circleUpSix").style.color = "#03A9F4";
 	} else if (random === 1 && value != 0) {
 		value--;
 		stockSix.value = value;
 		document.getElementById('stockPriceSix').innerHTML = value;
+		document.getElementById("circleUpSix").style.transform = "rotate(180deg)";
+		document.getElementById("circleUpSix").style.color = "#FF5252";
 	} else if (random === 2) {
 		console.log('Stock Price neutral ' + id);
 		document.getElementById('stockPriceSix').innerHTML = value;
+		document.getElementById("circleUpSix").style.transform = "rotate(90deg)";
+		document.getElementById("circleUpSix").style.color = "#757575";
 	} else {
 		console.log('randomizer not working');
 	}

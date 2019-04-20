@@ -76,6 +76,8 @@ table {
     line-height: 2.5;
     border-radius: 1000px;
     transition: 1s;
+    cursor: pointer;
+    user-select: none;
 }
 
 .header .button:hover {
@@ -138,12 +140,16 @@ table {
     font-size: 40px;
     color: #03A9F4;
     padding: 5px 20px;
+    cursor: pointer;
+    user-select: none;
 }
 
 .card .fa-minus-circle {
     font-size: 40px;
     color: #FF5252;
     padding: 5px 20px;
+    cursor: pointer;
+    user-select: none;
 }
 
 .card .stockQuantity {
@@ -176,6 +182,11 @@ table {
     width: 80%;
     overflow: hidden;
     margin: auto;
+    margin-bottom: 25px;
+}
+
+.help i {
+    vertical-align: middle;
 }
 
 .help .fa-arrow-alt-circle-up {
@@ -183,7 +194,7 @@ table {
     color: #757575;
     transition: 1s;
     transform: rotate(90deg);
-    padding: 10px 0px;
+    padding: 50px 10px;
 }
 
 .help .pos {
@@ -191,7 +202,7 @@ table {
     color: #03A9F4;
     transition: 1s;
     transform: rotate(0deg);
-    padding: 10px 0px;
+    padding: 50px 10px;
 }
 
 .help .neg {
@@ -199,16 +210,18 @@ table {
     color: #FF5252;
     transition: 1s;
     transform: rotate(180deg);
-    padding: 10px 0px;
+    padding: 50px 10px;
 }
 
 .help .fa-plus-circle {
     font-size: 48px;
     color: #03A9F4;
+    padding: 50px 10px;
 }
 
 .help .fa-minus-circle {
     font-size: 48px;
+    padding: 50px 10px;
     color: #FF5252;
 }
 
@@ -221,6 +234,7 @@ table {
     line-height: 2.5;
     border-radius: 1000px;
     transition: 1s;
+    margin: 50px 10px; 
 }
 /* ==================================================================== */
 /* ==================================================================== */
