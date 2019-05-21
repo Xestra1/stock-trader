@@ -71,7 +71,6 @@ function simulation() {
 	}
 }
 
-
 function randomizer() {
 	for (b = 0; b < 6; b++) {
 		var random = Math.floor(Math.random() * 3);
