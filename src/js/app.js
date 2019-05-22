@@ -1,6 +1,7 @@
 var bal = 1000;
 var days = 0;
 var complete = false;
+var multiply = 1;
 
 var stocks = [{
 		name: 'AMD',
@@ -63,7 +64,7 @@ function simulation() {
 		days++;
 		randomizer();
 		document.getElementById('day').innerHTML = days;
-	} else if (bal > 0 && bal >= 10000 && complete === false) {
+	} else if (bal > 0.0 && bal >= 10000 && complete === false) {
 		alert('You won!\r\nBalance: ' + bal + '\r\nDays to complete: ' + days + '\r\nHit OK to continue');
 		complete = true;
 	} else {
@@ -97,18 +98,24 @@ function randomizer() {
 
 function buy(numBuy) {
 	if (bal > 0.0 && stocks[numBuy].value < bal) {
-		stocks[numBuy].quantityOwned++;
-		bal -= stocks[numBuy].value;
+		stocks[numBuy].quantityOwned += multiply;
+		bal -= stocks[numBuy].value * multiply;
 		document.getElementById('quantity' + numBuy).innerHTML = stocks[numBuy].quantityOwned;
 		document.getElementById('balance').innerHTML = bal;
+		console.log(multiply);
 	}
 }
 
 function sell(numSell) {
-	if (stocks[numSell].quantityOwned >= 1) {
-		stocks[numSell].quantityOwned--;
-		bal += stocks[numSell].value;
+	if (stocks[numSell].quantityOwned >= 1 && multiply <= stocks[numSell].quantityOwned) {
+		stocks[numSell].quantityOwned -= multiply;
+		bal += stocks[numSell].value * multiply;
 		document.getElementById('quantity' + numSell).innerHTML = stocks[numSell].quantityOwned;
 		document.getElementById('balance').innerHTML = bal;
 	}
+}
+
+function multiplier(mult) {
+	multiply = mult;
+	document.getElementById("changedMultiplier").innerHTML = multiply;
 }
