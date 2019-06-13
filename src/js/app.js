@@ -2,6 +2,7 @@ var bal = 1000;
 var days = 0;
 var complete = false;
 var multiply = 1;
+var balToWin = 10000;
 
 var stocks = [{
 		name: 'AMD',
@@ -49,22 +50,21 @@ var stocks = [{
 
 // =============================================================
 
-
 document.getElementById('balance').innerHTML = bal;
 document.getElementById('day').innerHTML = days;
 
-for (a = 0; a < 6; a++) {
+for (a = 0; a < stocks.length; a++) {
 	document.getElementById('stockPrice' + a).innerHTML = stocks[a].value;
 	document.getElementById('quantity' + a).innerHTML = stocks[a].quantityOwned;
 }
 
 
 function simulation() {
-	if (bal > 0 && bal < 10000) {
+	if (bal > 0.0 && bal < balToWin) {
 		days++;
 		randomizer();
 		document.getElementById('day').innerHTML = days;
-	} else if (bal > 0.0 && bal >= 10000 && complete === false) {
+	} else if (bal > 0.0 && bal >= balToWin && complete === false) {
 		alert('You won!\r\nBalance: ' + bal + '\r\nDays to complete: ' + days + '\r\nHit OK to continue');
 		complete = true;
 	} else {
@@ -73,7 +73,7 @@ function simulation() {
 }
 
 function randomizer() {
-	for (b = 0; b < 6; b++) {
+	for (b = 0; b < stocks.length; b++) {
 		var random = Math.floor(Math.random() * 3);
 		if (random === 0) {
 			stocks[b].value = stocks[b].value + stocks[b].stockDeIn;
