@@ -1,10 +1,10 @@
-var bal = 1000;
-var days = 0;
-var complete = false;
-var multiply = 1;
-var balToWin = 10000;
+let bal = 1000;
+let days = 0;
+let complete = false;
+let multiply = 1;
+let balToWin = 10000;
 
-var stocks = [{
+let stocks = [{
 		name: 'AMD',
 		id: 0,
 		value: 25,
@@ -59,7 +59,7 @@ for (a = 0; a < stocks.length; a++) {
 }
 
 
-function simulation() {
+const simulation = () => {
 	if (bal > 0.0 && bal < balToWin) {
 		days++;
 		randomizer();
@@ -72,9 +72,9 @@ function simulation() {
 	}
 }
 
-function randomizer() {
+const randomizer = () => {
 	for (b = 0; b < stocks.length; b++) {
-		var random = Math.floor(Math.random() * 3);
+		let random = Math.floor(Math.random() * 3);
 		if (random === 0) {
 			stocks[b].value = stocks[b].value + stocks[b].stockDeIn;
 			document.getElementById('stockPrice' + b).innerHTML = stocks[b].value;
@@ -86,17 +86,15 @@ function randomizer() {
 			document.getElementById("circleUp" + b).style.transform = "rotate(180deg)";
 			document.getElementById("circleUp" + b).style.color = "#FF5252";
 		} else if (random === 2) {
-			console.log('Stock Price neutral ' + stocks[b].id);
+			// console.log('Stock Price neutral ' + stocks[b].id);
 			document.getElementById('stockPrice' + b).innerHTML = stocks[b].value;
 			document.getElementById("circleUp" + b).style.transform = "rotate(90deg)";
 			document.getElementById("circleUp" + b).style.color = "#757575";
-		} else {
-			console.log('randomizer not working');
 		}
 	}
 }
 
-function buy(numBuy) {
+const buy = (numBuy) => {
 	if (bal > 0.0 && stocks[numBuy].value < bal) {
 		stocks[numBuy].quantityOwned += multiply;
 		bal -= stocks[numBuy].value * multiply;
@@ -106,7 +104,7 @@ function buy(numBuy) {
 	}
 }
 
-function sell(numSell) {
+const sell = (numSell) => {
 	if (stocks[numSell].quantityOwned >= 1 && multiply <= stocks[numSell].quantityOwned) {
 		stocks[numSell].quantityOwned -= multiply;
 		bal += stocks[numSell].value * multiply;
@@ -115,7 +113,7 @@ function sell(numSell) {
 	}
 }
 
-function multiplier(mult) {
+const multiplier = (mult) => {
 	multiply = mult;
 	document.getElementById("changedMultiplier").innerHTML = multiply;
 }
